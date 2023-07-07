@@ -11,16 +11,6 @@ import { Loader } from './Loader/Loader';
 import { useState, useEffect } from 'react';
 
 export function App() {
-  // state = {
-  //   inputValue: '',
-  //   page: 1,
-  //   pictures: [],
-  //   error: null,
-  //   isOpen: false,
-  //   modalSrc: '',
-  //   loading: false,
-  //   totalImage: null,
-  // };
   const [inputValue, setInputValue] = useState('');
   const [page, setPage] = useState(1);
   const [pictures, setPictures] = useState([]);
@@ -34,6 +24,7 @@ export function App() {
     if (!inputValue) {
       return;
     }
+
     async function searchQuery() {
       setLoading(true);
       try {

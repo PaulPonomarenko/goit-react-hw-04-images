@@ -1,10 +1,10 @@
 import css from './ImageGalleryItem.module.css';
 import PropTypes from 'prop-types';
 
-export const ImageGalleryItem = ({ webformatURL, id, tags, largeImageURL }) => {
+export const ImageGalleryItem = ({ webformatURL, tags, largeImageURL }) => {
   return (
     <>
-      <li className={css.ImageGalleryItem} key={id}>
+      <li className={css.ImageGalleryItem}>
         <img
           src={webformatURL}
           alt={tags}
@@ -19,6 +19,5 @@ export const ImageGalleryItem = ({ webformatURL, id, tags, largeImageURL }) => {
 ImageGalleryItem.propTypes = {
   webformatURL: PropTypes.string.isRequired,
   tags: PropTypes.string,
-  id: PropTypes.number.isRequired,
   largeImageURL: PropTypes.string.isRequired,
 };
